@@ -105,7 +105,8 @@ def show_person(
         ...,
         gt=0,
         title="Person Id",
-        description="This is the person id. It's required"
+        description="This is the person id. It's required",
+        example=1258
         )
 ):
     return {person_id: "It exists¡"}
@@ -118,7 +119,8 @@ def update_person(
         ..., 
         title="Person ID",
         description="This is the person ID",
-        gt=0
+        gt=0,
+        example= 21512
     ),
         person: Person = Body (...),
         location: Location = Body(...)
