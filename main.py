@@ -35,7 +35,8 @@ class Person(BaseModel):
     first_name: str = Field(
         ...,
         min_length=1,
-        max_length=50     
+        max_length=50, 
+        example = "Emilio"    
     )
     last_name: str = Field(
         ...,
@@ -49,6 +50,17 @@ class Person(BaseModel):
     )
     hair_color: Optional [HairColor] = Field (default= None)
     is_married: Optional [bool] = Field (default=None)
+    
+    class Config: 
+         schema_extra = {
+             "example": {
+                 "first_name": "Facundo",
+                 "last_name": "García Martoni",
+                 "age": 21, 
+                 "hair_color": "blonde",
+                 "is_married": False
+             }
+        }
 
 """ En el home vamos a ejecutar la aplicación """
 @app.get("/") 
