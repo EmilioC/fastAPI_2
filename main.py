@@ -11,8 +11,10 @@ from pydantic import Field
 from fastapi import FastAPI
 from fastapi import Body, Query, Path
 
+# Iniciar proyecto
 # Activar entorno virtual .\venv\Scripts\activate
 # Lanzar aplicación: uvicorn main:app --reload
+
 
 app = FastAPI() 
 
